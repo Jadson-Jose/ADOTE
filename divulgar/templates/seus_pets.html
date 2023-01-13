@@ -57,10 +57,14 @@
                                         {{pet.raca}}
                                     </td>
                                     <td>
-                                        {{pet.status}}
+                                        {% if pet.status == "P" %}
+                                            <span class="badge text-bg-primary">Para adoção</span>
+                                        {% elif pet.status == "A" %}
+                                            <span class="badge text-bg-success">Adotado</span>
+                                        {% endif %}
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-danger">REMOVER</a>
+                                        <a href="{% url 'remover_pet' pet.id %}" class="btn btn-danger">REMOVER</a>
                                     </td>
                                 </tr>
                             {% endfor %}
