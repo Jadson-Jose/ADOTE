@@ -133,7 +133,7 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#MESSAGES
+# MESSAGES
 MESSAGE_TAGS = {
     constants.DEBUG: 'aleert-primary',
     constants.ERROR: 'alert-danger',
@@ -141,3 +141,7 @@ MESSAGE_TAGS = {
     constants.INFO: 'alert-info',
     constants.WARNING: 'alert-warning'
 }
+
+# EMAIL
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
